@@ -151,6 +151,14 @@ static char kAFImageRequestOperationObjectKey;
     self.af_imageRequestOperation = nil;
 }
 
+- (BOOL)hasImageForRequest:(NSURLRequest *)request{
+    UIImage *cachedImage = [[[self class] af_sharedImageCache] cachedImageForRequest:request];
+    if(cachedImage){
+        return YES;
+    }
+    return NO;
+}
+
 @end
 
 #pragma mark -
