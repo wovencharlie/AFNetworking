@@ -73,6 +73,8 @@
  */
 - (void)cancelImageRequestOperation;
 
+- (BOOL)hasImageForRequest:(NSURLRequest *)request;
+
 @end
 
 #endif
